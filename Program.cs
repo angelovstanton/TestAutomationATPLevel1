@@ -186,11 +186,23 @@ namespace FirstConsoleApp
 
 
             //Day 3 - Book
-            Book qa = new Book("QA course", "AA", 1.25F);
-            Console.WriteLine(qa);
+            //Book qa = new Book("QA course", "AA", 1.25F);
+            //Console.WriteLine(qa);
 
-            GoldenEditionBook autoQA = new GoldenEditionBook("Automation course", "Anton A", 900.50F);
-            Console.WriteLine(autoQA);
+            //GoldenEditionBook autoQA = new GoldenEditionBook("Automation course", "Anton A", 900.50F);
+            //Console.WriteLine(autoQA);
+
+            //Day 3 - Animals
+            List<Animal> zoo = new List<Animal>();
+            zoo.Add(new Dog("Rufus", 3, true));
+            zoo.Add(new Frog("PepeLeFrog", 1, false));
+            zoo.Add(new Kitten("Lucie", 4) );
+            zoo.Add(new Tomcat("Herc", 2));
+
+            foreach (var pet in zoo)
+            {
+                Console.WriteLine(pet);
+            }
         }
 
         public static bool IsPrimeNumber(long number)
@@ -214,6 +226,7 @@ namespace FirstConsoleApp
             return (first > second) ? first : second;
         }
     }
+
     public class Employee
     {
         public string FirstName { get; set; }
