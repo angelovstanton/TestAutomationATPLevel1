@@ -35,11 +35,14 @@ namespace FirstConsoleApp
         private string _authorName = string.Empty;
         public string Author
         {
-            get { return _authorName; }
+            get 
+            { 
+                return _authorName;
+            }
             set
             {
                 int result;
-                bool isDigit = int.TryParse(value[0].ToString(), out result);
+                bool isDigit = int.TryParse(value[0].ToString(), out int resultNum);
                 if (isDigit)
                 {
                     throw new ArgumentException("Author not valid!  Not allowed to start with number!");
@@ -66,7 +69,8 @@ namespace FirstConsoleApp
 
         public override string ToString()
         {
-            return $"{base.ToString()} Title=`{Title}` Author=`{Author}` Price={Price.ToString("c02")}";
+            string result = string.Format("Title=`{0}` Author=`{1}` Price={2}", Title, Author, Price);
+            return $"Title={Title} Author={Author} Price={Price.ToString("c02")}";
         }
 
     }

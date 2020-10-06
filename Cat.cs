@@ -6,7 +6,8 @@ namespace FirstConsoleApp
 {
     public abstract class Cat : Animal
     {
-        protected Cat(string name, int age, bool isFemale) : base(name, age, isFemale)
+        protected Cat(string name, int age, bool isFemale) 
+            : base(name, age, isFemale)
         {
         }
 

@@ -176,25 +176,27 @@ namespace FirstConsoleApp
             ////Console.WriteLine(GetMax(3, 9));
             
             // DEMOS: Classes and Objects
-            Car car1 = new Car("FORD");
+            ////Car car1 = new Car("FORD");
 
-            Focus focus = new Focus("FOCUS");
-            Audi audi = new Audi("AUDI");
-            focus.Describe();
-            audi.Describe();
+            ////Focus focus = new Focus("FOCUS");
+            ////Audi audi = new Audi("AUDI");
+            ////focus.Describe();
+            ////audi.Describe();
 
-            Console.WriteLine(focus.ToString());
+            ////Console.WriteLine(focus.ToString());
 
-            Person ivan = new Person("Ivan", 20);
-            Person george = new Person("george", 21);
-            Person[] people = new Person[] { ivan, george };
+            ////Person ivan = new Person("Ivan", 20);
+            ////Person george = new Person("george", 21);
+            ////Person[] people = new Person[] { ivan, george };
 
-            Array.Sort(people);
+            ////Array.Sort(people);
 
-            if (people.Contains(george))
-            {
-                Console.WriteLine();
-            }
+            ////if (people.Contains(george))
+            ////{
+            ////    Console.WriteLine();
+            ////}
+            Book newBook = new Book("My Book Title", "AA", 30.2899787f);
+            Console.WriteLine(newBook.ToString());
         }
 
         static int[] InitializeArray(int elementsCount, int mulFactor)
