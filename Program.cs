@@ -1,242 +1,248 @@
 ﻿using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Linq;
+using FirstConsoleApp.Classes;
 
 namespace FirstConsoleApp
 {
     class Program
     {
-        static void Main(string[] args) 
+        static void Main(string[] args)
         {
-            //int result = 2;
-            //string msg = $"automatic{result} {result+200} {result+2000} ";
-            //Console.WriteLine(msg);
-            //msg = "sheir";
-            //Console.WriteLine(msg);
+            // DEMOS: Intro
+            ////string textToBePrinted = "Automating the Planet";
+            ////textToBePrinted = "Automating " + "the " + "Planet";
+            ////textToBePrinted = string.Concat("Automate", " ", "the", " ", "Planet");
+            ////Console.Write(textToBePrinted);
 
-            //msg = DateTime.Now.ToString();
-            //Console.WriteLine(msg);
+            // DEMOS: Data Types
+            ////byte centuries = 25;    
+            ////ushort years = 2009;
+            ////uint days = 840480;
+            ////ulong hours = 19536520;
+            ////float realNumber = 2.1F;
+            ////double preciseRealNumber = 2.1D;
 
-            //msg = Math.Sqrt(32346).ToString();
-            //Console.WriteLine(msg);
+            ////bool isFemale = false;
+            ////Console.WriteLine(isFemale);
 
-            //msg = (32346 * 32346).ToString();
-            //Console.WriteLine(msg);
+            ////string firstText = "Automate ";
+            ////string secondPart = "Planet";
+            ////object resultObject = firstText + secondPart;
+            ////string resultText = (string)resultObject;
 
-            //byte vbyte = 87;
-            //sbyte vsbyte = -113;
-            //short vshort = -113;
-            //ushort vushort =87;
-            //int vint = -2000;
-            //uint vunit = 51240;
-            //long vlong = 4735941;
-            //ulong vulong = 4735941;
+            ////Console.WriteLine(resultText);
 
-            //bool isFemale = false;
-            //Console.WriteLine(isFemale);
+            ////string firstName = "Anton";
+            ////string lastName = "Angelov";
+            ////int age = 30;
+            ////bool isFemale = false;
+            ////////Guid id = Guid.NewGuid();
+            ////Random random = new Random();
+            ////int id = random.Next(38560000, 38569999);
+            ////Console.WriteLine(id);
 
-            //string sHi = "Hello";
-            //string sWorld = "World";
+            ////int firstNumber = 5;
+            ////int secondNumber = 10;
+            ////int temp = firstNumber; // 5
+            ////firstNumber = secondNumber; // 10
+            ////secondNumber = temp; // 5
 
-            //object oVar = sHi + " " + sWorld;
-            //string sResult = (string)oVar;
-            //Console.WriteLine(sResult);
+            // DEMO: Operators:
+            ////int a = 5;
+            ////a = a + 1;
+            ////a -= 1;
+            ////Console.WriteLine(++a);
+            ////Console.WriteLine(a);
 
-            //int var1 = 5;
-            //int var2 = 10;
+            ////int[] numbers = new[] { 5, 6, 7, 8, 9};
 
-            //int var3 = var2;
-            //var2 = var1;
-            //var1 = var3;
-            //Console.WriteLine(var1);
-            //Console.WriteLine(var2);
+            ////for (int i = 0; i < numbers.Length; i++)
+            ////{
 
-            //Random rand = new Random();
-            //int id = rand.Next(38560000, 38569999);
-            //Console.WriteLine(id);
+            ////}
+            ////Console.Write("Please enter a number to check: ");
+            ////string numberString = Console.ReadLine();
+            ////int numberToCheck = int.Parse(numberString);
 
+            ////int a = 5;
+            ////int b = 10;
+            ////int h = 4;
+            ////Console.WriteLine(((a + b)/2) * h);
+            ////if (numberToCheck > 0)
+            ////{
+            ////    Console.WriteLine("It is a positive number.");
+            ////    Console.WriteLine("this should be executed in the IF too.");
+            ////}
 
-            //exercise 4
-            //int value = 5;
-            //bool isEven = (value % 2) == 0;
-            //Console.WriteLine($"value {value}  isEven = {isEven}");
+            ////Console.WriteLine("It is a negative number.");
 
-            //int width = 5;
-            //int height = 6;
-            //int area = width * height;
-            //Console.WriteLine($"width {width}  height {height} area = {area}");
+            ////switch (numberToCheck)
+            ////{
+            ////    case 1:
+            ////        {
+            ////            Console.WriteLine("Monday");
+            ////            Console.WriteLine("use curly brackets!");
+            ////            break;
+            ////        }
+            ////    case 2:
+            ////        Console.WriteLine("Tuesday");
+            ////        break;
+            ////    case 3:
+            ////        Console.WriteLine("Wednesday");
+            ////        break;
+            ////    case 4:
+            ////        Console.WriteLine("Thursday");
+            ////        break;
+            ////    case 5:
+            ////        Console.WriteLine("Friday");
+            ////        break;
+            ////    case 6: 
+            ////        Console.WriteLine("Saturday"); 
+            ////        break;
+            ////    case 7: 
+            ////        Console.WriteLine("Sunday"); 
+            ////        break;
+            ////    default: 
+            ////        Console.WriteLine("Error!"); 
+            ////        break;
+            ////}
+            ////for (int i = 1; i < 31; i++)
+            ////{
+            ////    if (i % 7 != 0 && i % 3 != 0)
+            ////    {
+            ////        Console.WriteLine(i);
+            ////    }
+            ////}
+            // DEMOS: Arrays
+            ////int[] myFirstArray = new int[7];
+            ////myFirstArray[0] = 78;
+            ////myFirstArray[1] = 79;
+            ////myFirstArray[2] = 71;
+            ////myFirstArray[3] = 7;
+            ////myFirstArray[4] = 1;
+            ////myFirstArray[5] = 2;
+            ////myFirstArray[6] = 3;
 
-            //int value2 = 37;
-            //bool isprime = IsPrimeNumber(value2);
-            //Console.WriteLine($"is {value2} prime = {isprime}");
+            ////for (int i = 0; i < myFirstArray.Length; i++)
+            ////{
+            ////    myFirstArray[i] += 1;
+            ////    Console.WriteLine(myFirstArray[i]);
+            ////}
 
-            //int sideA = 4;
-            //int sideB = 3;
-            //area = (sideA + sideB) * height / 2; //trapezoid
-            //Console.WriteLine($"sideA {sideA} sideB {sideB}  height {height} area = {area}");
+            ////foreach (var number in myFirstArray)
+            ////{
+            ////    Console.WriteLine(number);
+            ////}
 
+            ////var cities = new List<string>
+            ////{
+            ////    "London",
+            ////    "Kiev"
+            ////};
 
-            //exercise 5
-            //int valueA = 5;
-            //int valueB = 3;
-            //if (valueA > valueB)
-            //{
-            //    int temp = valueB;
-            //    valueB = valueA;
-            //    valueA = temp;
-            //}
-            //Console.WriteLine($"valueA {valueA} valueB {valueB}");
+            ////cities.Add("Ottawa");
+            ////cities.Add("Berlin");
 
-            //int prod1 = -5;
-            //int prod2 = 7;
-            //int prod3 = -9;
-            //if (prod1 < 0)
-            //{
-            //    Console.WriteLine($"prod1 {prod1} is negative");
-            //}
-            //else
-            //{
-            //    Console.WriteLine($"prod1 {prod1} is positive");
-            //}
+            ////for (int i = 0; i < cities.Count; i++)
+            ////{
+            ////    Console.WriteLine(cities[i]);
+            ////    Console.WriteLine(cities.ElementAt(i));
+            ////}
 
-            //if (prod2 < 0)
-            //{
-            //    Console.WriteLine($"prod2 {prod2} is negative");
-            //}
-            //else
-            //{
-            //    Console.WriteLine($"prod2 {prod2} is positive");
-            //}
-            //if (prod3 < 0)
-            //{
-            //    Console.WriteLine($"prod3 {prod3} is negative");
-            //}
-            //else
-            //{
-            //    Console.WriteLine($"prod3 {prod3} is positive");
-            //}
+            ////foreach (var city in cities)    
+            ////{
+            ////    Console.WriteLine(city);
+            ////}
+            ///
 
+            ////int[] result = InitializeArray(40, 7);
+            ////int[] result1 = InitializeArray(20, 2);
 
-            //Day 2 - Exercises 1
-            //for (int i = 0; i <= 30; i++)
-            //{
-            //    Console.WriteLine(i);
-            //}
+            ////int[] numbers = new int[20];
+            ////for (int i = 0; i < numbers.Length; i++)
+            ////{
+            ////    numbers[i] = i * 5;
+            ////}
 
-            //for (int i = 1; i <= 30; i++)
-            //{
-            //    if ((i % 3 != 0) && (i % 7 != 0))
-            //    {
-            //        Console.WriteLine(i);
-            //    }               
-            //}
+           ////var numList = new List<int>(20);
+            ////for (int i = 0; i < 20; i++)
+            ////{
+            ////    numList.Add(i * 5);
+            ////    Console.WriteLine(numList[i]);
+            ////}
 
-            //Day 2 - Exercises 2
-            //int[] numbers = new int[21];
-            //for (int i = 0; i < numbers.Length; i++)
-            //{
-            //    numbers[i] = i * 5;
-            //    Console.WriteLine(numbers[i]);
-            //}
+            ////int result = GetMax(2 + 1, 9);
+            ////Console.WriteLine(GetMax(3, 9));
+            
+            // DEMOS: Classes and Objects
+            Car car1 = new Car("FORD");
 
-            //Console.WriteLine("With LIST");
-            //List<int> lstInts = new List<int>();
-            //for (int i = 0; i < 21; i++)
-            //{
-            //    lstInts.Add(i * 5);
-            //}
-            //foreach (int item in lstInts)
-            //{
-            //    Console.WriteLine(item);
-            //}
+            Focus focus = new Focus("FOCUS");
+            Audi audi = new Audi("AUDI");
+            focus.Describe();
+            audi.Describe();
 
-            ////Day 2 - Exercises 3
-            //int firstValue = 7, secondValue = 23;
-            //int result = GetMax(firstValue, secondValue);
-            //Console.WriteLine($"GetMax({firstValue}, {secondValue}) == {result}");
+            Console.WriteLine(focus.ToString());
 
+            Person ivan = new Person("Ivan", 20);
+            Person george = new Person("george", 21);
+            Person[] people = new Person[] { ivan, george };
 
-            //Day 3   - Exercises
-            //Random rand = new Random();
-            //for (int i = 1; i < 11; i++)
-            //{
-            //    int id = rand.Next(1, 10);
-            //    Console.WriteLine(id);
-            //}
+            Array.Sort(people);
 
-            //Day 3 - Person
-            //Person Jack = new Person("Jack", 8);
-            //Console.WriteLine(Jack);//FirstConsoleApp.Person Name=Jack Age=8
-            //Jack.ID = Guid.Empty;
-
-            //Child Jill = new Child("Jill", 11);
-            //Console.WriteLine(Jill);//FirstConsoleApp.Child Name=Jill Age=11
-            //Jill.ID = Guid.Empty;
-
-            //Console.WriteLine(Jack == Jill); //false
-            //Console.WriteLine(Jack.Equals(Jill)); //true
-
-            //Jill.ID = Guid.NewGuid();
-            //Console.WriteLine(Jack.Equals(Jill)); //false
-
-            //Console.WriteLine(Jack.Age.CompareTo(Jill.Age)); //-1
-
-            //Jill.Age = Jack.Age;
-            //Console.WriteLine(Jack.Age.CompareTo(Jill.Age)); //0
-
-
-            //Day 3 - Book
-            //Book qa = new Book("QA course", "AA", 1.25F);
-            //Console.WriteLine(qa);
-
-            //GoldenEditionBook autoQA = new GoldenEditionBook("Automation course", "Anton A", 900.50F);
-            //Console.WriteLine(autoQA);
-
-            //Day 3 - Animals
-            List<Animal> zoo = new List<Animal>();
-            zoo.Add(new Dog("Rufus", 3, true));
-            zoo.Add(new Frog("PepeLeFrog", 1, false));
-            zoo.Add(new Kitten("Lucie", 4) );
-            zoo.Add(new Tomcat("Herc", 2));
-
-            foreach (var pet in zoo)
+            if (people.Contains(george))
             {
-                Console.WriteLine(pet);
+                Console.WriteLine();
             }
         }
 
-        public static bool IsPrimeNumber(long number)
+        static int[] InitializeArray(int elementsCount, int mulFactor)
         {
-            if (number <= 1)
+            int[] numbers = new int[elementsCount];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = i * mulFactor;
+            }
+
+            return numbers;
+        }
+
+        static bool IsPrime(int number)
+        {
+            if (number == 1)
+            {
                 return false;
-            else if (number % 2 == 0)
-                return number == 2;
+            }
 
-            long N = (long)(Math.Sqrt(number) + 0.5);
+            if (number == 2)
+            {
+                return true;
+            }
 
-            for (int i = 3; i <= N; i += 2)
+            var limit = Math.Ceiling(Math.Sqrt(number));
+
+            for (int i = 2; i <= limit; ++i)  
+            {
                 if (number % i == 0)
+                {
                     return false;
+                }
+            }
 
             return true;
         }
 
-        public static int GetMax(int first=1, int second=0)
+        static int GetMax(int first = 1, int second = 0)
         {
-            return (first > second) ? first : second;
+            if (first > second)
+            {
+                return first;
+            }
+            else
+            {
+                return second;
+            }
         }
-    }
-
-    public class Employee
-    {
-        public string FirstName { get; set; }
-        public string FamilyName { get; set; }
-
-        public int Age { get; set; }
-
-        public char Gender { get; set; }
-        public bool IsFemale { get { return this.Gender == 'f'; } }
-
-        public Guid IDNumber { get; set; }
     }
 }
