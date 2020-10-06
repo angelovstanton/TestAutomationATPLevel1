@@ -27,7 +27,8 @@ namespace School.Classes
                 if (string.IsNullOrEmpty(value))
                 {
                     throw new ArgumentException("Name cannot be empty!");
-                }                
+                }
+
                 _name = value;
             }
         }
@@ -35,17 +36,18 @@ namespace School.Classes
         int _studentId = 0;
         public int Id
         {
-            get 
-            { 
-                return _studentId; 
+            get
+            {
+                return _studentId;
             }
             set
             {
-                
+
                 if (value < _minId || value > _maxId)
                 {
                     throw new ArgumentException($"Id must be between {_minId} and {_maxId}");
                 }
+
                 _studentId = value;
             }
         }

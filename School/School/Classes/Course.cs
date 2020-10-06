@@ -6,6 +6,8 @@ namespace School.Classes
 {
     public class Course
     {
+        private const int _maxStudents = 30;
+
         public Course(string name)
         {
             this.Name = name;
@@ -37,10 +39,12 @@ namespace School.Classes
             {
                 throw new ArgumentException("Student cannot be null!");
             }
-            if (this.Students.Count > 30)
+
+            if (this.Students.Count > _maxStudents)
             {
                 throw new ArgumentException("Course is full!");
             }
+
             this.Students.Add(pupil);
         }
     }
