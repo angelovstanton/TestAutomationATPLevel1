@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace School
+namespace SchoolUTF
 {
     class Program
     {

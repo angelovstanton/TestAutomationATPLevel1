@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
-namespace School.Classes
+namespace SchoolUTF.Classes
 {
     public class Course
     {
@@ -31,7 +32,7 @@ namespace School.Classes
             }
         }
 
-        private List<Student> Students { get; set; }
+        internal List<Student> Students { get; set; }
 
         public void AddStudent(Student pupil)
         {
@@ -40,12 +41,31 @@ namespace School.Classes
                 throw new ArgumentException("Student cannot be null!");
             }
 
-            if (this.Students.Count > _maxStudents)
+            if (this.Students.Count >= _maxStudents)
             {
-                throw new ArgumentException("Course is full!");
+                throw new ArgumentException($"Course '{this.Name}' is full!");
+            }
+
+            //validate this new student does not have same Id as any others in this course
+            bool notUniqueID = this.Students.Any(s => s.Id == pupil.Id);
+            if (notUniqueID)
+            {
+                throw new ArgumentException($"Student '{pupil.Name}' Id is not unique for this course '{this.Name}'!");
             }
 
             this.Students.Add(pupil);
         }
+
+        public void RemoveStudent(Student pupil)
+        {
+            if (pupil == null)
+            {
+                throw new ArgumentException("Student cannot be null!");
+            }
+                        
+            this.Students.Remove(pupil);
+        }
+
+        public int StudentCount => this.Students.Count;
     }
 }

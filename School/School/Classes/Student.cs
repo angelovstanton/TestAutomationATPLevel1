@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace School.Classes
+namespace SchoolUTF.Classes
 {
     public class Student
     {
-        private int _minId = 10000;
-        private int _maxId = 99999;
+        private static readonly int _minId = 10000;
+        private static readonly int _maxId = 99999;
 
         public Student(string name, int id)
         {
@@ -51,5 +51,8 @@ namespace School.Classes
                 _studentId = value;
             }
         }
+
+        public static int MinId => _minId;
+        public static int MaxId => _maxId;
     }
 }
