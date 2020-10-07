@@ -46,8 +46,7 @@ namespace WebDriverTestsDemo
 
              var webDriverWait = new WebDriverWait(_driver, TimeSpan.FromSeconds(2));
             var el = webDriverWait.Until(ExpectedConditions.ElementExists(By.Id("someDynamicElement")));
-            var el = webDriverWait.Until(ExpectedConditions.ElementToBeClickable(By.Id("someDynamicElement")));
-            var el = webDriverWait.Until(ExpectedConditions.(By.Id("someDynamicElement")));
+            var el1 = webDriverWait.Until(ExpectedConditions.ElementToBeClickable(By.Id("someDynamicElement")));
 
 
 
