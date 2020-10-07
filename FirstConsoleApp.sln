@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstConsoleApp", "FirstCon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFirstNUnitTestProject", "MyFirstNUnitTestProject\MyFirstNUnitTestProject\MyFirstNUnitTestProject.csproj", "{520A5BA4-20EF-444C-A4F4-A32D5C55673D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDriverTestsDemo", "WebDriverTestsDemo\WebDriverTestsDemo\WebDriverTestsDemo.csproj", "{1D17584F-619E-40BD-8BF3-CB57FA682608}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebDriverTestsDemo", "WebDriverTestsDemo\WebDriverTestsDemo\WebDriverTestsDemo.csproj", "{1D17584F-619E-40BD-8BF3-CB57FA682608}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School", "School\School.csproj", "{0C2BE968-6B3E-45F2-B7E6-84730BF1D39D}"
 EndProject
@@ -17,11 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School.NUnit.UnitTests", "S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School.UnitTests", "School.Tests\School.UnitTests.csproj", "{7A80176E-A719-4E52-9E30-F7032DEB5A98}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School", "School\School\School.csproj", "{8F97C1BA-A94C-4916-ACB2-5FF036D04E19}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D33011FB-2E32-4ABA-A1AB-7C22E5189E76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Tests", "Tests\School.Tests\School.Tests.csproj", "{C1391E0F-CFB0-40BB-81B9-F65193D3403B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School.Tests", "Tests\School.Tests\School.Tests.csproj", "{C1391E0F-CFB0-40BB-81B9-F65193D3403B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolAnton", "SchoolAnton\SchoolAnton.csproj", "{F0598F6C-678A-4DA0-BF20-6F76FDD94EF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,14 +57,14 @@ Global
 		{7A80176E-A719-4E52-9E30-F7032DEB5A98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A80176E-A719-4E52-9E30-F7032DEB5A98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A80176E-A719-4E52-9E30-F7032DEB5A98}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F97C1BA-A94C-4916-ACB2-5FF036D04E19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F97C1BA-A94C-4916-ACB2-5FF036D04E19}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F97C1BA-A94C-4916-ACB2-5FF036D04E19}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F97C1BA-A94C-4916-ACB2-5FF036D04E19}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C1391E0F-CFB0-40BB-81B9-F65193D3403B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C1391E0F-CFB0-40BB-81B9-F65193D3403B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1391E0F-CFB0-40BB-81B9-F65193D3403B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1391E0F-CFB0-40BB-81B9-F65193D3403B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0598F6C-678A-4DA0-BF20-6F76FDD94EF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0598F6C-678A-4DA0-BF20-6F76FDD94EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0598F6C-678A-4DA0-BF20-6F76FDD94EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0598F6C-678A-4DA0-BF20-6F76FDD94EF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

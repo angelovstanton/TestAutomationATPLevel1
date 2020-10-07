@@ -11,11 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\School\School.csproj" />
+    <Folder Include="SchoolTests\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="SchoolTests\" />
+    <ProjectReference Include="..\SchoolAnton\SchoolAnton.csproj" />
   </ItemGroup>
 
 </Project>
