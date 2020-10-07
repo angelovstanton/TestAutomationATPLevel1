@@ -67,6 +67,14 @@ namespace MyFirstWebTests
 
             Assert.AreEqual<string>("Components :: Documentation for Selenium", _driver.Title);
             //throws exception on the Click()
+
+            // _driver.SwitchTo().Frame(_driver.FindElement(By.Id("iframeID")));
+            //   now can query for elements within that frame
+
+            //var oText = _driver.SwitchTo().Alert().Text;    //javascript Alert popup
+
+
+           //_driver.SwitchTo().DefaultContent();//switch back to main page [that contains the iframeID]
         }
 
 
@@ -137,7 +145,8 @@ namespace MyFirstWebTests
 
             string loginId = "next";
             IWebElement elLogin = waiter.Until((d) => d.FindElement(By.Name(loginId)));
-            elLogin.Click();
+            //elLogin.Click();
+            elLogin.SendKeys(Keys.Enter);
 
             //Thread.Sleep(3000);
             string errorId = "error";
@@ -148,6 +157,49 @@ namespace MyFirstWebTests
             var el = waiter.Until(ExpectedConditions.TextToBePresentInElement(elError, "Email is required."));
             Console.WriteLine(el);
             Assert.IsTrue(el);
+
+        }
+
+
+
+        [TestMethod]
+        [TestCategory("Sheir-FirstWeb")]
+        [Ignore]
+        public void LoginGoogleCalendar()
+        {
+            string url = "http://www.google.com/";
+
+            _driver.Navigate().GoToUrl(url);
+            WebDriverWait waiter = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
+
+            Assert.AreEqual<string>("Webmail Login - Bluehost", _driver.Title);
+
+
+            //string eamilId = "email";
+            //IWebElement elEmail = waiter.Until((d) => d.FindElement(By.Id(eamilId)));
+            //elEmail.Clear();
+            ////elEmail.SendKeys("sheir@magma.ca");
+
+
+            //string passwordId = "password";
+            //IWebElement elPassword = waiter.Until((d) => d.FindElement(By.Id(passwordId)));
+            //elPassword.Clear();
+            ////elPassword.SendKeys("secret");
+
+
+            //string loginId = "next";
+            //IWebElement elLogin = waiter.Until((d) => d.FindElement(By.Name(loginId)));
+            //elLogin.Click();
+
+            ////Thread.Sleep(3000);
+            //string errorId = "error";
+            //var elError = waiter.Until(ExpectedConditions.ElementExists(By.ClassName(errorId)));
+            //Assert.IsNotNull(elError);
+            //Console.WriteLine(elError.Text);
+
+            //var el = waiter.Until(ExpectedConditions.TextToBePresentInElement(elError, "Email is required."));
+            //Console.WriteLine(el);
+            //Assert.IsTrue(el);
 
         }
     }
