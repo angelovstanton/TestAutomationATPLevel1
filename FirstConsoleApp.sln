@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School.Tests", "Tests\Schoo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolAnton", "SchoolAnton\SchoolAnton.csproj", "{F0598F6C-678A-4DA0-BF20-6F76FDD94EF1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstWebTests", "Tests\MyFirstWebTest\MyFirstWebTests\MyFirstWebTests.csproj", "{9184B098-4A3D-4DAC-AAC7-26DF883DF2C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,12 +67,17 @@ Global
 		{F0598F6C-678A-4DA0-BF20-6F76FDD94EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0598F6C-678A-4DA0-BF20-6F76FDD94EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0598F6C-678A-4DA0-BF20-6F76FDD94EF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9184B098-4A3D-4DAC-AAC7-26DF883DF2C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9184B098-4A3D-4DAC-AAC7-26DF883DF2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9184B098-4A3D-4DAC-AAC7-26DF883DF2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9184B098-4A3D-4DAC-AAC7-26DF883DF2C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C1391E0F-CFB0-40BB-81B9-F65193D3403B} = {D33011FB-2E32-4ABA-A1AB-7C22E5189E76}
+		{9184B098-4A3D-4DAC-AAC7-26DF883DF2C2} = {D33011FB-2E32-4ABA-A1AB-7C22E5189E76}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {387F02B3-8325-4BA7-8384-0CF63C5CDB64}
