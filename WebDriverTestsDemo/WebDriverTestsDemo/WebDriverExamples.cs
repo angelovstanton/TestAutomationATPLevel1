@@ -22,7 +22,46 @@ namespace WebDriverTestsDemo
         [TearDown]
         public void TestCleanup()
         {
-            _driver.Quit();
+            _driver?.Quit();
+        }
+
+        [Test]
+        public void ValidationMessageDisplayed_When_WrongEmailAndPasswordSet()
+        {
+            _driver.Navigate().GoToUrl("https://login.bluehost.com/hosting/webmail");
+
+            var emailTextField = _driver.FindElement(By.Id("email"));
+            emailTextField.Clear();
+            emailTextField.SendKeys("myWrongEmail@gmail.com");
+
+            var passwordField = _driver.FindElement(By.Id("password"));
+            passwordField.Clear();
+            passwordField.SendKeys("wrongPass");
+
+            var submitButton = _driver.FindElement(By.XPath("//input[@value='Log In']"));
+            submitButton.Click();
+
+            var errorMessage = _driver.FindElement(By.XPath("//span[@class='error'][1]"));
+            Assert.AreEqual("Email address or password is incorrect.", errorMessage.Text);
+        }
+
+        [Test]
+        public void ValidationMessagesDisplayed_When_EmptyEmailAndPasswordSet()
+        {
+           _driver.Navigate().GoToUrl("https://login.bluehost.com/hosting/webmail");
+
+            var emailTextField = _driver.FindElement(By.Id("email"));
+            emailTextField.Clear();
+
+            var passwordField = _driver.FindElement(By.Id("password"));
+            passwordField.Clear();
+
+            var submitButton = _driver.FindElement(By.XPath("//input[@value='Log In']"));
+            submitButton.Click();
+
+            var errorMessages = _driver.FindElements(By.XPath("//span[@class='error']"));
+             Assert.AreEqual("Email is required.", errorMessages[0].Text);
+             Assert.AreEqual("Password is required.", errorMessages[1].Text);
         }
 
         [Test]
@@ -43,13 +82,13 @@ namespace WebDriverTestsDemo
             Assert.AreEqual("Components", componentsPageHeader.Text);
 
 
-            Actions actions = new Actions(_driver);
-            var gitHubRepoLink = _driver.FindElement(By.XPath("//a[text()='GitHub repo']"));
-            actions.MoveToElement(gitHubRepoLink).Perform();
-            gitHubRepoLink.Click();
+            ////Actions actions = new Actions(_driver);
+            ////var gitHubRepoLink = _driver.FindElement(By.XPath("//a[text()='GitHub repo']"));
+            ////actions.MoveToElement(gitHubRepoLink).Perform();
+            ////gitHubRepoLink.Click();
 
-            var githubRepoPageHeader = _driver.FindElements(By.TagName("h1"))[1];
-            Assert.AreEqual("Selenium Site and Documentation", githubRepoPageHeader.Text);
+            ////var githubRepoPageHeader = _driver.FindElements(By.TagName("h1"))[1];
+            ////Assert.AreEqual("Selenium Site and Documentation", githubRepoPageHeader.Text);
         }
     }
 }
